@@ -1,0 +1,24 @@
+name: CI Pipeline
+# workflow runs
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+# task to execute
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test

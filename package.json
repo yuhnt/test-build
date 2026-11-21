@@ -1,0 +1,27 @@
+{
+  "name": "test-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node --test",
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuhnt/test-build.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yuhnt/test-build/issues"
+  },
+  "homepage": "https://github.com/yuhnt/test-build#readme",
+  "dependencies": {
+    "express": "^5.3.0",
+    "supertest": "^7.3.2"
+  }
+}
